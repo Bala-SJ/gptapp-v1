@@ -1,0 +1,7 @@
+=====================================================================================
+May 24 -- Install instructions . Create Github codespace, login to azure and deploy
+
+azd auth login --use-device-code
+azd env new monthday-username
+azd up
+=====================================================================================

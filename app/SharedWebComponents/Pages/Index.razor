@@ -1,0 +1,65 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<MudCard Elevation="24">
+    <MudCardHeader>
+        <!-- <CardHeaderAvatar>
+            <MudAvatar Color="Color.Info" Size="Size.Large">
+                <MudIcon Icon="@Icons.Custom.Brands.MicrosoftAzure" Size="Size.Large" />
+            </MudAvatar>
+        </CardHeaderAvatar>
+        <CardHeaderContent>
+            <MudText Typo="Typo.h4">
+                <MudLink Href="https://cognitivemachines.in" Color="Color.Primary" 
+                         Target="_blank" aria-label="Cognitive Machines OpenAI Demo">
+                    Cognitive Machines OpenAI Demo
+                </MudLink>
+            </MudText>
+            <MudText Typo="Typo.h6"></MudText>
+        </CardHeaderContent> -->
+    </MudCardHeader>
+    <MudCardContent>
+        <MudCarousel Class="mud-width-full"
+                     BulletsColor="Color.Primary" Style="height: 58vh;"
+                     AutoCycle="true" TData="Image" Context="image"
+                     ItemsSource=@_images AutoCycleTime=@TimeSpan.FromSeconds(3)>
+            <ItemTemplate>
+                <div class="d-flex">
+                    <MudImage Src=@image.Src Elevation="5" Class="rounded-lg mx-auto my-auto" />
+                </div>
+            </ItemTemplate>
+        </MudCarousel>
+        <!-- <div class="full-width pt-6 text-align-center">
+            <MudText Typo="Typo.caption">
+                These photo were created using generative AI
+                <MudLink Href="https://www.bing.com/images/create/" Target="_blank" 
+                         Class="mud-typography-caption mud-secondary-text"
+                         aria-label="Microsoft Bing Create link.">
+                    Bing - Image Creator (powered by DALL-E)
+                </MudLink>
+            </MudText>
+        </div> -->
+    </MudCardContent>
+    <MudCardActions>
+        <MudIconButton Icon="@Icons.Material.Filled.Public" Size="Size.Large" Target="_blank"
+                       aria-label="Cognitive Machines | OpenAI demo landing page"
+                       Href="https://cognitivemachines.in/"
+                       Title="Cognitive Machines | OpenAI demo landing page" />
+        <MudIconButton Icon="@Icons.Custom.Brands.LinkedIn" Size="Size.Large" Target="_blank"
+                       aria-label="Bala | LinkedIn Page"
+                       Href="https://www.linkedin.com/in/balasaravanan-v/" 
+                       Title="Bala | LinkedIn Page" />
+        <MudIconButton Icon="@Icons.Custom.Brands.YouTube" Size="Size.Large" Target="_blank"
+                       aria-label="OpenAI demo playlist"
+                       Href="https://www.youtube.com/channel/UClyB5X_Qtn6K-jIWQ2efokg"
+                       Title="OpenAI demo playlist" />
+        <MudSpacer />
+        <!-- <MudIconButton Icon="@Icons.Custom.Brands.MudBlazor" Size="Size.Large" Target="_blank"
+                       aria-label="MudBlazor (Blazor component library) link."
+                       Href="https://www.mudblazor.com/" Title="MudBlazor Component Library link." />
+        <MudIconButton Icon="@Icons.Material.Filled.Html" Size="Size.Large" Target="_blank"
+                       aria-label="Markdig (GitHub repository) link."
+                       Href="https://github.com/xoofx/markdig" Title="Markdig GitHub repo link." /> -->
+    </MudCardActions>
+</MudCard>
